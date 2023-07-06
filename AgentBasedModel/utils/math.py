@@ -2,6 +2,7 @@ from math import exp
 
 
 def mean(x: list) -> float:
+
     return sum(x) / len(x)
 
 
