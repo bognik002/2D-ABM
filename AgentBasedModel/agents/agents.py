@@ -221,6 +221,7 @@ class Random(Trader):
     """
     Random creates noisy orders to recreate trading in real environment.
     """
+
     def __init__(self, market: ExchangeAgent, cash: float or int, assets: int = 0):
         super().__init__(market, cash, assets)
         self.type = 'Random'
@@ -305,6 +306,7 @@ class Fundamentalist(Trader):
     """
     Fundamentalist evaluate stock value using Constant Dividend Model. Then places orders accordingly
     """
+    
     def __init__(self, market: ExchangeAgent, cash: float or int, assets: int = 0, access: int = 1):
         """
         :param market: exchange agent link
@@ -397,6 +399,7 @@ class Chartist(Trader):
     buys stock or sells. Sentiment revaluation happens at the end of each iteration based on opinion
     propagation among other chartists, current price changes
     """
+
     def __init__(self, market: ExchangeAgent, cash: float or int, assets: int = 0):
         """
         :param market: exchange agent link
